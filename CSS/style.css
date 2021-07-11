@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+/* custom scroll bar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+::selection{
+  background: rgb(0,123,255,0.3);
+}
+.content{
+  max-width: 1250px;
+  margin: auto;
+  padding: 0 30px;
+}
+.navbar{
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  padding: 25px 0;
+  transition: all 0.3s ease;
+}
+.navbar.sticky{
+  background: #DCDCDC;
+  padding: 10px 0;
+  box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.1);
+}
+.navbar .content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar .logo a{
+  color: #111;
+  font-size: 30px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.navbar .menu-list{
+  display: inline-flex;
+}
+.menu-list li{
+  list-style: none;
+}
+.menu-list li a{
+  color: #111;
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 25px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.menu-list li a:hover{
+  color: #007bff;
+}
+.banner{
+  background: url("Picture/BG3.jpeg") no-repeat;
+  height: 50vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.about{
+  padding: 30px 0;
+}
+.about .title{
+  font-size: 38px;
+  font-weight: 700;
+}
+.about p{
+  padding-top: 20px;
+  text-align: justify;
+}
+.icon{
+  color: #111;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+}
+.menu-list .cancel-btn{
+  position: absolute;
+  right: 30px;
+  top: 20px;
+}
+@media (max-width: 1230px) {
+  .content{
+    padding: 0 60px;
+  }
+}
+@media (max-width: 1100px) {
+  .content{
+    padding: 0 40px;
+  }
+}
+@media (max-width: 900px) {
+  .content{
+    padding: 0 30px;
+  }
+}
+@media (max-width: 868px) {
+  body.disabled{
+    overflow: hidden;
+  }
+  .icon{
+    display: block;
+  }
+  .icon.hide{
+    display: none;
+  }
+  .navbar .menu-list{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    max-width: 400px;
+    left: -100%;
+    top: 0px;
+    display: block;
+    padding: 40px 0;
+    text-align: center;
+    background: #DCDCDC;
+    transition: all 0.3s ease;
+  }
+  .navbar.show .menu-list{
+    left: 0%;
+  }
+  .navbar .menu-list li{
+    margin-top: 45px;
+  }
+  .navbar .menu-list li a{
+    font-size: 23px;
+    margin-left: -100%;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  .navbar.show .menu-list li a{
+    margin-left: 0px;
+  }
+}
+@media (max-width: 380px) {
+  .navbar .logo a{
+    font-size: 27px;
+  }
+}
+footer{ 
+  bottom: 0px;
+  width: 100%;
+  background: #DCDCDC;
+ }
+.konten div a{
+	color: #aaa;
+}
+.main-konten{
+	display: flex;
+}
+.main-konten .kotak{
+	flex-basis: 50%;
+	padding: 10px 20px;
+}
+.kotak h2{
+	font-size: 1.125rem;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+.kotak .konten{
+	margin: 20px 0 0;
+	position: relative;
+}
+.kotak .konten:before{
+	position: absolute;
+	content: '';
+	height: 2px;
+	top: -10px;
+	width: 100%;
+	background: #111;
+}
+.kotak .konten:after{
+	position: absolute;
+	content: '';
+	height: 2px;
+	width: 15%;
+	background: white;
+	top: -10px;
+}
+.kiri .konten p{
+	text-align: justify;
+}
+.kiri .konten .sosial{
+	margin: 20px 0 0;
+}
+.kiri .konten .sosial a{
+	padding: 0 2px;
+}
+.kiri .konten .sosial a span{
+	height: 40px;
+	width: 40px;
+	background: #111;
+	line-height: 40px;
+	text-align: center;
+	border-radius: 5px;
+	transition: 0.3s;
+}
+.kiri .konten .sosial a span:hover{
+	background: white;
+}
+.tengah .konten .fas{
+	font-size: 1.4735rem;
+	background: black;
+	height: 45px;
+	width: 45px;
+	line-height: 45px;
+	text-align: center;
+	color: #aaa;
+	border-radius: 50%;
+	transition: 0.3s;
+	cursor: pointer;
+}
+.tengah .konten .fas:hover{
+	background: white;
+}
+.tengah .konten .teks{
+	font-size: 1.0625rem;
+	font-weight: 500;
+	padding-left: 10px;
+}
+.tengah .konten .phone{
+	margin: 10px 0;
+}
+.kanan form .text{
+	font-size: 1.0625rem;
+	margin-bottom: 2px;
+	color: #696969;
+}
+.kanan form .msg{
+	margin-top: 10px;
+}
+.kanan form input, .kanan form textarea{
+	width: 100%;
+	font-size: 1.0625rem;
+	background: #aaa;
+	padding-left: 10px;
+	border: 1px solid #DCDCDC;
+}
+.kanan form input:focus, 
+.kanan form textarea:focus{
+	outline-color: white;
+}
+.kanan form input{
+	height: 35px;
+}
+.kanan form .btn{
+	margin-top: 10px; 
+}
+.kanan form .btn button{
+	height: 40px;
+	width: 100%;
+	border: none;
+	outline: none;
+	background: black;
+	color: #aaa;
+	font-size: 1.0625rem;
+	font-weight: 500;
+	cursor: pointer;
+	transition: .3s;
+}
+.kanan form .btn button:hover{
+	background: white;
+}
+.bottom center{
+	padding: 5px;
+	font-size: 0.9375rem;
+	background: gray;
+}
+.bottom center span{
+	color: #111;
+}
+.bottom center a{
+	color: #DCDCDC;
+	text-decoration: none;
+}
+.bottom center a:hover{
+	text-decoration: underline;
+}
+@media screen and (max-width: 900px){
+	footer{
+		position: relative;
+		bottom: 0px;
+	}
+	.main-konten{
+		flex-wrap: wrap;
+		flex-direction: column;
+	}
+	.main-konten .kotak{
+		margin: 5px 0;
+	}
+}
